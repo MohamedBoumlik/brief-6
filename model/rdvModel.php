@@ -43,7 +43,7 @@ class RdvModel {
 
         $qry = "SELECT * FROM `rendez_vous` WHERE id=".$id;
         $obj1 = new Connection();
-        return $obj1->conn()->query($qry)->fetchAll(PDO::FETCH_ASSOC)[0];
+        return $obj1->conn()->query($qry)->fetch(PDO::FETCH_ASSOC);
         
     }
 
